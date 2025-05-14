@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="ru; en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redact</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!--Добавление иконки мусорки-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Стиль для устройств с разным размером-->
+  </head>
+
+    <body>
+  
+    <nav><ul>
+    <li><a href="./redact_event.html" class="active">Добавить урок</a></li>
+  <li><a href="../table.html">Расписание</a></li>
+    <li><a href="./students.html">Ученики</a></li>
+    <li><a href="./to_do.html">Заметки</a></li>
+    </ul></nav>
+  <div style="margin-top: 60px;">
+    <h1>Новое событие:</h1>
+  </div>
+  <p id="hl2"></p>  
+
+<div>
+ <div style="float: left; width: 60%; border-right: 1px solid rgb(100, 100, 100); ">
+   <form action='/submit_new_event' method='POST'>
+  <input type="text" id="time_hl1" name="time_help_st"></p>  
+  <input type="text" id="time_hl2" name="time_help_end"></p>  
+  <div style="float: left; width: 94%; margin-left: 20px; margin-bottom: 20px;"> 
+  <div class="select_day">
+  <input type="radio" id="mon" name="day" value="1"/>
+  <label for="mon">Понедельник</label>
+  <input type="radio" id="tue" name="day" value="2"/>
+  <label for="tue">Вторник</label>
+  <input type="radio" id="wed" name="day" value="3"/>
+  <label for="wed">Среда</label>
+  <input type="radio" id="thu" name="day" value="4"/>
+  <label for="thu">Четверг</label>
+  <input type="radio" id="fri" name="day" value="5"/>
+  <label for="fri">Пятница</label>
+  <input type="radio" id="sat" name="day" value="6"/>
+  <label for="sat">Суббота</label>
+  <input type="radio" id="sun" name="day" value="7" style=""/>
+  <label for="sun">Воскресенье</label>
+  </div>
+  </div>
+  <div style="float: left; width: 25%;"> 
+    <label for="name"> Имя: </label>
+  </div>
+  <div style="float: left; width: 64%;"> 
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div style="float: left; width: 25%;">
+    <label for="comment" > Прим.: </label>
+  </div>
+  <div style="float: left; width: 64%;"> 
+    <input type="text" id="comment" name="comment">
+  </div>
+  <div style="float: left; width: 20%;"> 
+    <label for="time_"> Время: </label>
+  </div>
+  <div style="float: left; width: 69%;"> 
+    <div style="float: left; width: 35%;" id="time_">
+    <p style="margin-bottom: 5px; text-align: center;">Начало:</p>
+<div class="picker" style="width: 100px; float: right;">
+<span title="ЧАС" id="start_hour_pic" onscroll="getTime()">
+  <time style="opacity: 0;">74&</time>
+  <time>-</time>
+  <time>0</time>
+  <time>1</time>
+  <time>2</time>
+  <time>3</time>
+  <time>4</time>
+  <time>5</time>
+  <time>6</time>
+  <time>7</time>
+  <time>8</time>
+  <time>9</time>
+  <time id='11h'>10</time>
+  <time id='12h'>11</time>
+  <time>12</time>
+  <time>13</time>
+  <time>14</time>
+  <time>15</time>
+  <time>16</time>
+  <time>17</time>
+  <time>18</time>
+  <time>19</time>
+  <time>20</time>
+  <time>21</time>
+  <time>22</time>
+  <time>23</time>
+  <time></time>
+  <time></time>
+</span>
+<span title="МИН" id="start_min_pic" onscroll="getTime()">
+  <time style="opacity: 0;">74&</time>
+  <time>-</time>
+  <time>00</time>
+  <time>01</time>
+  <time>02</time>
+  <time>03</time>
+  <time>04</time>
+  <time>05</time>
+  <time>06</time>
+  <time>07</time>
+  <time>08</time>
+  <time>09</time>
+  <time>10</time>
+  <time>11</time>
+  <time>12</time>
+  <time>13</time>
+  <time>14</time>
+  <time>15</time>
+  <time>16</time>
+  <time>17</time>
+  <time>18</time>
+  <time>19</time>
+  <time>20</time>
+  <time>21</time>
+  <time>22</time>
+  <time>23</time>
+  <time>24</time>
+  <time>25</time>
+  <time>26</time>
+  <time>27</time>
+  <time>28</time>
+  <time>29</time>
+  <time>30</time>
+  <time>31</time>
+  <time>32</time>
+  <time>33</time>
+  <time>34</time>
+  <time>35</time>
+  <time>36</time>
+  <time>37</time>
+  <time>38</time>
+  <time>39</time>
+  <time>40</time>
+  <time>41</time>
+  <time>42</time>
+  <time>43</time>
+  <time>44</time>
+  <time>45</time>
+  <time>46</time>
+  <time>47</time>
+  <time>48</time>
+  <time>49</time>
+  <time>50</time>
+  <time>51</time>
+  <time>52</time>
+  <time>53</time>
+  <time>54</time>
+  <time>55</time>
+  <time>56</time>
+  <time>57</time>
+  <time>58</time>
+  <time>59</time>
+  <time></time>
+  <time></time>
+</span>
+</div>
+    </div>
+    <div style="float: left; width: 35%;">
+<p style="margin-bottom: 5px; text-align: center;">Конец:</p>
+<div class="picker" style="width: 100px; float: right;">
+<span title="ЧАС" id="end_hour_pic" onscroll="getTime()">
+  <time style="opacity: 0;">74&</time>
+  <time>-</time>
+  <time>0</time>
+  <time>1</time>
+  <time>2</time>
+  <time>3</time>
+  <time>4</time>
+  <time>5</time>
+  <time>6</time>
+  <time>7</time>
+  <time>8</time>
+  <time>9</time>
+  <time>10</time>
+  <time>11</time>
+  <time>12</time>
+  <time>13</time>
+  <time>14</time>
+  <time>15</time>
+  <time>16</time>
+  <time>17</time>
+  <time>18</time>
+  <time>19</time>
+  <time>20</time>
+  <time>21</time>
+  <time>22</time>
+  <time>23</time>
+  <time></time>
+  <time></time>
+</span>
+<span title="МИН" id="end_min_pic" onscroll="getTime()">
+  <time style="opacity: 0;">74&</time>
+  <time>-</time>
+  <time>00</time>
+  <time>01</time>
+  <time>02</time>
+  <time>03</time>
+  <time>04</time>
+  <time>05</time>
+  <time>06</time>
+  <time>07</time>
+  <time>08</time>
+  <time>09</time>
+  <time>10</time>
+  <time>11</time>
+  <time>12</time>
+  <time>13</time>
+  <time>14</time>
+  <time>15</time>
+  <time>16</time>
+  <time>17</time>
+  <time>18</time>
+  <time>19</time>
+  <time>20</time>
+  <time>21</time>
+  <time>22</time>
+  <time>23</time>
+  <time>24</time>
+  <time>25</time>
+  <time>26</time>
+  <time>27</time>
+  <time>28</time>
+  <time>29</time>
+  <time>30</time>
+  <time>31</time>
+  <time>32</time>
+  <time>33</time>
+  <time>34</time>
+  <time>35</time>
+  <time>36</time>
+  <time>37</time>
+  <time>38</time>
+  <time>39</time>
+  <time>40</time>
+  <time>41</time>
+  <time>42</time>
+  <time>43</time>
+  <time>44</time>
+  <time>45</time>
+  <time>46</time>
+  <time>47</time>
+  <time>48</time>
+  <time>49</time>
+  <time>50</time>
+  <time>51</time>
+  <time>52</time>
+  <time>53</time>
+  <time>54</time>
+  <time>55</time>
+  <time>56</time>
+  <time>57</time>
+  <time>58</time>
+  <time>59</time>
+  <time></time>
+  <time></time>
+</span>
+</div>
+    </div>
+  </div>
+  <button type="submit" class="subbtn" style="margin-top: 20px; margin-left: 20px;">Создать</button>
+ </form>
+ </div>
+<div style="float: right; width: 39%;" class="left" id="list">
+  <ul style="margin-top: -8px" class="event_list" id="event_list">
+  </ul>
+</div>
+</div>
+
+<script type="text/javascript" src="../scripts/scripts.js"></script>
+<script type="text/javascript" src="../scripts/redact_event.js"></script>
+<script>
+/*
+function getReq() {
+    document.getElementById('cons').innerHTML = "getReq() called "; //Поиск ошибки для debug
+    var name = document.getElementById("name2").value;
+    var obj = new Object();
+    obj.name = name;
+ 
+    fetch("/submit_new_event", {
+      method: "POST",
+      mode: 'cors',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(obj)
+    })
+    .then(response => response.json())
+    .then(result => {
+      document.getElementById('cons').innerHTML = document.getElementById('cons').innerHTML + result;
+      })
+    .catch(error => {
+      document.getElementById('cons').innerHTML = document.getElementById('cons').innerHTML + error;
+    });
+    }
+*/
+function delete_event(id) {
+    //document.getElementById('hl2').innerHTML = "deleting event number " + id;
+    var obj = new Object();
+    obj.id = id;
+    fetch("/delete_event", {
+      method: "POST",
+      mode: 'cors',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(obj)
+    })
+    .then(response => response.json())
+    .then(result => {
+      document.getElementById('cons').innerHTML = document.getElementById('cons').innerHTML + result;
+      })
+    .catch(error => {
+      document.getElementById('cons').innerHTML = document.getElementById('cons').innerHTML + error;
+    });
+}
+
+</script>
+
+<script>
+function selectDay(x) {
+    let i = 1;
+    while (i < 7) {
+      if (i == x){
+          document.getElementById("daybtn" + i).classList.add('daybtnact');
+          document.getElementById("daybtn" + i).classList.remove('btnact');
+      }
+      else{
+          document.getElementById("daybtn" + i).classList.remove('daybtnact');
+          document.getElementById("daybtn" + i).classList.add('btnact');
+      }
+      i += 1;
+    }
+}
+</script>
+
+<script type="text/javascript">
+    let myArr;
+
+    async function getInfo_list() {
+      //e.preventDefault();
+      const res = await fetch('/event_list', {method: 'GET'});
+      try {
+        const data = await res.json(); 
+        myArr = data.myList;
+        createList(myArr);
+        //document.getElementById("hl").innerHTML = data.mystr;
+      }
+      catch(err) {
+        document.getElementById("hl2").innerHTML = document.getElementById("hl2").innerHTML + '  ' + err.message;
+      }
+    }
+
+    getInfo_list();
+    </script>
+  </body>
+
+</html>

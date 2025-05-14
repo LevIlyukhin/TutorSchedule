@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+
+<html lang="ru; en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+
+    <nav><ul>
+    <li><a href="files/redact_event.html">Добавить урок</a></li>
+    <li><a href="./table.html" class="active">Расписание</a></li>
+    <li><a href="files/students.html">Ученики</a></li>
+    <li><a href="files/to_do.html">Заметки</a></li>
+    </ul></nav>
+
+  <div style="margin-top: 60px;">
+    <h1>Расписание</h1>
+  </div>
+    <p id="hl"> </p>
+    <p id="info"> </p>
+    <p id="warn" style="color: red; font-size: large;"> </p>
+
+    <div id="mytable"></div>
+
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script type="text/javascript">
+    let myArr;
+
+    async function getInfo() {
+      //e.preventDefault();
+      const res = await fetch('/table', {method: 'GET'});
+      try {
+        const data = await res.json(); 
+        myArr = data.myData;
+        processData(myArr);
+        //document.getElementById("hl").innerHTML = data.mystr;
+      }
+      catch(err) {
+        document.getElementById("hl").innerHTML = document.getElementById("hl").innerHTML + '  ' + err.message;
+      }
+    }
+
+    getInfo();
+    </script>
+  
+
+  </body>
+
+</html>

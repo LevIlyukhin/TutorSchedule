@@ -1,0 +1,397 @@
+@charset "utf-8";
+/* CSS Document */
+
+#time_hl1 {
+  display: none;
+}
+
+#time_hl2 {
+  display: none;
+}
+
+
+img {
+  width: 100%;
+  }
+
+p {
+    margin: 2%;
+}
+
+p.time{
+  font-size: small;
+}
+
+h1, h2{
+    margin: 2%;
+}
+
+label {
+  margin: 12%;
+  font-size: larger;
+  font-weight: bold;
+}
+
+nav ul {
+	 list-style-type: none;  
+	 margin: 0;              
+	 padding: 0;
+   width: 100%;
+   position: fixed;
+	 background-color: rgb(0, 143, 167);  
+	 overflow: auto;
+   top: 0;
+   z-index: 5;
+	 }
+
+
+nav ul li { float: left }
+
+nav ul li a { 
+    display: block;  
+    color: rgb(216, 215, 228);  
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none;
+    font-size: 18px;
+    }
+
+nav ul li a:hover {
+    color: rgb(54, 69, 79);
+    background-color: rgb(196, 195, 208);
+}
+
+nav ul li a.active {
+    color: rgb(196, 195, 208);
+    background-color: rgb(8, 69, 126);
+}
+
+nav ul li a.active :hover {
+    color: rgb(196, 195, 208);
+}
+
+table {
+    max-width: 97.5%;
+    margin: 2%;
+    /*border: 1px solid rgb(196, 195, 208); 
+    border-collapse: collapse;*/
+    border-radius: 4px;
+    background-color: rgb(34, 41, 46);
+    color: black
+}
+
+
+th, td {
+  /*
+    border-left: 1px solid black;
+    border-right: 1px solid black; */
+    border-collapse: collapse;
+    border-radius: 3px;
+    text-align: center;
+    /*font-size: 1.2vw;*/
+}
+
+th {
+    background-color: rgb(196, 195, 208);
+    border: 1px solid black;
+}
+
+div.makewidth {
+  width: 130px;
+}
+
+tr:nth-child(odd){
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(197, 232, 239);
+}
+
+td:hover {
+    background-color: rgb(0, 143, 167);
+    color: rgb(8, 69, 126)
+}
+
+td.offline_event {
+    background-color: rgb(133, 197, 121);
+    /*border: 1px solid black;*/
+}
+
+td.online_event {
+    background-color: rgb(113, 186, 220);
+    /*border: 1px solid black;*/
+}
+
+td.offline_event:hover {
+    background-color: rgb(141, 231, 125);
+}
+
+td.online_event:hover {
+    background-color: rgb(129, 200, 233);
+}
+
+td.offline_event div:hover {
+    overflow: visible;
+}
+
+div.my_event {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  overflow: auto;
+  line-height: 1;
+  margin-top: 3px;
+  width: 130px;
+  margin: 0px;
+}
+
+div.event_comment_online {
+  display: none;
+  position: absolute;
+  width: 130px;
+  background-color: rgb(129, 200, 233);
+}
+
+div.event_comment_offline {
+  display: none;
+  position: absolute;
+  width: 130px;
+  background-color: rgb(141, 231, 125);
+}
+
+div.my_event:hover .event_comment_online {
+  display: block;
+}
+
+div.my_event:hover .event_comment_offline {
+  display: block;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+  table {
+    width: 50%;
+  }
+}
+
+.daybtn {
+  height: 35px;
+  width: 30%;
+  background-color: rgb(0, 143, 167);
+  color: rgb(196, 195, 208);
+  font-size: 17px;
+  margin: 5px 4px 5px 4px;
+  border: 0px solid black;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.daybtn:hover {
+  background-color: rgb(196, 195, 208);
+  color: rgb(34, 41, 46);
+}
+
+.subbtn {
+  height: 35px;
+  width: 30%;
+  background-color: rgb(0, 143, 167);
+  color: rgb(196, 195, 208);
+  font-size: 17px;
+  margin: 5px 5px 5px 5px;
+  border: 0px solid black;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.subbtn:hover {
+  background-color: rgb(196, 195, 208);
+  color: rgb(34, 41, 46);
+}
+
+.daybtnact {
+  height: 35px;
+  width: 30%;
+  background-color: rgb(8, 69, 126);
+  color: rgb(196, 195, 208);
+  font-size: 17px;
+  margin: 5px 5px 5px 5px;
+  border: 0px solid rgb(196, 195, 208);
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.picker {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.picker::before,
+.picker::after {
+  content: " ";
+  position: absolute;
+  top: -1%;
+  background: linear-gradient(
+    rgb(34, 41, 46), 
+    75%, 
+    rgba(34, 41, 46, 0)
+  );
+  width: 100%;
+  height: calc(50% - 1.5ex);
+  pointer-events: none;
+}
+
+.picker::after {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(
+    rgba(34, 41, 46, 0), 
+    45%, 
+    rgb(34, 41, 46)
+  ); 
+}
+
+.picker > * {
+  display: grid;
+  grid-auto-rows: 4vmin;
+  align-items: center;
+  max-block-size: calc(4vmin * 4);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+  padding-inline-end: 1ch;
+  font-size: 7vmin;
+  font-weight: lighter;
+}
+
+.picker > [title]::before {
+  content: attr(title);
+  position: -webkit-sticky;
+  margin-top: -20px;
+  align-self: start;
+  color: rgb(158, 157, 168);
+  z-index: 1;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.picker > * > * {
+  scroll-snap-align: center;
+}
+
+.picker > *::-webkit-scrollbar {
+  display: none;
+}
+
+.picker > * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+time {
+  text-align: center;
+  color: rgb(196, 195, 208);
+  font-size: 20px;
+}
+
+.select_day {
+  list-style-type: none;  
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+.select_day li {
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+
+.select_day label{
+  height: 37px;
+  width: 31%;
+  float: left;
+  background-color: rgb(0, 143, 167);
+  color: rgb(196, 195, 208);
+  font-size: 17px;
+  margin: 5px 4px 5px 4px;
+  border: 0px solid black;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+
+}
+
+
+.select_day input[type="radio"] {
+  display: none;
+}
+
+.select_day label{ 
+  font-size: 17px;
+    display: block;  
+    color: rgb(216, 215, 228);  
+    text-align: center; 
+    padding: 8px 16px; 
+    text-decoration: none;
+    }
+
+.select_day label:hover {
+  background-color: rgb(196, 195, 208);
+  color: rgb(34, 41, 46);
+}
+
+.select_day input[type="radio"]:checked + label {
+  color: rgb(196, 195, 208);
+  background-color: rgb(8, 69, 126);
+}
+
+.delete_btn {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(34, 41, 46);
+  color: rgb(196, 195, 208);
+  font-size: 17px;
+  margin: 5px 5px 5px 5px;
+  border: 1px solid rgb(196, 195, 208);
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete_btn:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+body {
+    background-color: rgb(34, 41, 46);
+    color: rgb(196, 195, 208);
+	width:800px;
+	margin:0px;
+	font-family:'Arial', sans-serif;
+	line-height:1.5
+	}
